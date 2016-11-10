@@ -20,8 +20,32 @@ angular
         controllerAs: 'main',
         templateUrl: 'views/main.html'
       })
-      .state('about', {
-        url: '/about',
+      .state('services', {
+        url: '/services',
+        controller: 'AboutCtrl',
+        controllerAs: 'about',
+        templateUrl: 'views/about.html'
+      })
+      .state('installations', {
+        url: '/installations',
+        controller: 'AboutCtrl',
+        controllerAs: 'about',
+        templateUrl: 'views/about.html'
+      })
+      .state('reserve', {
+        url: '/reserve',
+        controller: 'AboutCtrl',
+        controllerAs: 'about',
+        templateUrl: 'views/about.html'
+      })
+      .state('register', {
+        url: '/register',
+        controller: 'AboutCtrl',
+        controllerAs: 'about',
+        templateUrl: 'views/about.html'
+      })
+      .state('login', {
+        url: '/reserve',
         controller: 'AboutCtrl',
         controllerAs: 'about',
         templateUrl: 'views/about.html'
