@@ -10,21 +10,24 @@
  */
 angular
   .module('padelApp', [
-    'ngRoute'
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('home', {
+        url: '/',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        templateUrl: 'views/main.html'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
+      .state('about', {
+        url: '/about',
         controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
+        controllerAs: 'about',
+        templateUrl: 'views/about.html'
+      });
+
+      $urlRouterProvider.otherwise(function() {
+        return '/';
       });
   });
