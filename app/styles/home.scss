@@ -1,6 +1,12 @@
-.main-description-title {
-  border-radius: 5px;
-  background-color: #dff0d8;
-  text-align: center;
-  font-weight: bold;
+.main-box{
+  .main-description-title {
+    box-shadow: 0 -20px 100px -20px #dadada;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .main-description-content {
+    box-shadow: 0 5px 10px 0 #dadada;
+    padding: 10px;
+  }
 }

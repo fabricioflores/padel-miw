@@ -44,7 +44,8 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
+  background-image: url('../images/padel.jpg');
+  background-size: cover;
   border-bottom: 1px solid #e5e5e5;
 
   .btn {
@@ -80,4 +81,11 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.logo-image {
+  display: inline-block !important;
+  height: 40px;
+  margin-top: -10px;
+  margin-right: 10px;
 }
