@@ -28,7 +28,7 @@ angular
         url: '/installations',
         controller: 'AboutCtrl',
         controllerAs: 'about',
-        templateUrl: 'views/about.html'
+        templateUrl: 'views/installations.html'
       })
       .state('reserve', {
         url: '/reserve',
