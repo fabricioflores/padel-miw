@@ -6,5 +6,4 @@ angular
 
 function ReserveController() {
   var reserveVm = this;
-  }
 }
