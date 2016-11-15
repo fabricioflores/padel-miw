@@ -1,12 +1,16 @@
 .main-box{
-  .main-description-title {
-    box-shadow: 0 -20px 100px -20px #dadada;
-    text-align: center;
-    font-weight: bold;
-  }
 
   .main-description-content {
-    box-shadow: 0 5px 10px 0 #dadada;
+    box-shadow: 0 5px 10px 5px #dadada;
     padding: 10px;
+    text-align: center;
+    height: 410px;
   }
+}
+
+.img-main {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  display: block;
 }
