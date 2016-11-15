@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name padelApp
- * @description
- * # padelApp
- *
- * Main module of the application.
- */
 angular
   .module('padelApp', [
     'ui.router'
