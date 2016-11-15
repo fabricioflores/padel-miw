@@ -20,33 +20,29 @@ angular
       })
       .state('services', {
         url: '/services',
-        controller: 'AboutCtrl',
-        controllerAs: 'about',
-        templateUrl: 'views/about.html'
+        templateUrl: 'views/services.html'
       })
       .state('installations', {
         url: '/installations',
-        controller: 'AboutCtrl',
-        controllerAs: 'about',
         templateUrl: 'views/installations.html'
       })
       .state('reserve', {
         url: '/reserve',
-        controller: 'AboutCtrl',
-        controllerAs: 'about',
-        templateUrl: 'views/about.html'
+        controller: 'ReserveController',
+        controllerAs: 'reserveVm',
+        templateUrl: 'views/reserve.html'
       })
       .state('register', {
         url: '/register',
-        controller: 'AboutCtrl',
-        controllerAs: 'about',
-        templateUrl: 'views/about.html'
+        controller: 'RegisterController',
+        controllerAs: 'registerVm',
+        templateUrl: 'views/register.html'
       })
       .state('login', {
-        url: '/reserve',
-        controller: 'AboutCtrl',
-        controllerAs: 'about',
-        templateUrl: 'views/about.html'
+        url: '/login',
+        controller: 'LoginController',
+        controllerAs: 'loginVm',
+        templateUrl: 'views/login.html'
       });
 
       $urlRouterProvider.otherwise(function() {
