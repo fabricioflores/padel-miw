@@ -2,7 +2,8 @@
 
 angular
   .module('padelApp', [
-    'ui.router'
+    'ui.router',
+    'ngMessages'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
