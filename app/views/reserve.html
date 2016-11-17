@@ -26,6 +26,17 @@
     </div>
     </div>
 
+    <div class="form-group" ng-class="{ 'has-error': reserveVm.reserveForm.date.$touched && reserveVm.reserveForm.date.$invalid }">
+        <label>Fecha</label>
+        <input datetime-picker name="date" class="form-control"
+            ng-model="reserveVm.reserve.date"
+            required>
+
+            <div class="help-block" ng-messages="reserveVm.reserveForm.date.$error" ng-if="reserveVm.reserveForm.date.$touched">
+        <p ng-message="required">Campo requerido</p>
+    </div>
+    </div>
+
     <div class="form-group">
         <button type="submit" class="btn btn-primary" ng-disabled="reserveVm.reserveForm.$invalid">Submit</button>
     </div>

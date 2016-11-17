@@ -3,7 +3,8 @@
 angular
   .module('padelApp', [
     'ui.router',
-    'ngMessages'
+    'ngMessages',
+    'angularjs-datetime-picker'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
