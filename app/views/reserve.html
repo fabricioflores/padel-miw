@@ -3,7 +3,6 @@
 <div class="container-pages">
   <form name="reserveVm.reserveForm" novalidate ng-submit="reserveVm.submit()">
 
-    <!-- name field -->
     <div class="form-group" ng-class="{ 'has-error': reserveVm.reserveForm.name.$touched && reserveVm.reserveForm.name.$invalid }">
         <label>Nombre</label>
         <input type="text" name="name" class="form-control"
@@ -11,7 +10,19 @@
             required>
 
             <div class="help-block" ng-messages="reserveVm.reserveForm.name.$error" ng-if="reserveVm.reserveForm.name.$touched">
-        <p ng-message="required">Nombre requerido</p>
+        <p ng-message="required">Campo requerido</p>
+    </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': reserveVm.reserveForm.email.$touched && reserveVm.reserveForm.email.$invalid }">
+        <label>E-mail</label>
+        <input type="email" name="email" class="form-control"
+            ng-model="reserveVm.reserve.email"
+            required>
+
+            <div class="help-block" ng-messages="reserveVm.reserveForm.email.$error" ng-if="reserveVm.reserveForm.email.$touched">
+        <p ng-message="required">Campo requerido</p>
+        <p ng-message="email">E-mail no válido</p>
     </div>
     </div>
 
