@@ -13,6 +13,7 @@ function LoginController(LoginService, Alertify, $state) {
     if (!loginVm.loginForm.$invalid) {
       LoginService.login(loginVm.login).then(function(response){
         //TODO save token locally
+        console.console.log(response);
         $state.go('home').then(function(){
           Alertify.success('Has iniciado sesión');
         });

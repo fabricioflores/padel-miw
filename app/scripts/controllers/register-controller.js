@@ -5,5 +5,5 @@ angular
   .controller('RegisterController', RegisterController);
 
 function RegisterController() {
-  var registerVm = this;
+  //var registerVm = this;
 }
