@@ -1,1 +1,73 @@
-<h1>Register</h1>
+<h1>Registrar</h1>
+
+<div class="container-pages">
+  <form name="registerVm.registerForm" novalidate ng-submit="registerVm.submit()">
+
+    <div class="form-group" ng-class="{ 'has-error': registerVm.registerForm.name.$touched && registerVm.registerForm.name.$invalid }">
+        <label>Usuario</label>
+        <input type="text" name="name" class="form-control"
+            ng-model="registerVm.user.username"
+            required>
+
+      <div class="help-block" ng-messages="registerVm.registerForm.name.$error" ng-if="registerVm.registerForm.name.$touched">
+        <p ng-message="required">Campo requerido</p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': registerVm.registerForm.email.$touched && registerVm.registerForm.email.$invalid }">
+        <label>E-mail</label>
+        <input type="email" name="email" class="form-control"
+            ng-model="registerVm.user.email"
+            required>
+
+      <div class="help-block" ng-messages="registerVm.registerForm.email.$error" ng-if="registerVm.registerForm.email.$touched">
+        <p ng-message="required">Campo requerido</p>
+        <p ng-message="email">E-mail no válido</p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': registerVm.registerForm.password.$touched && registerVm.registerForm.password.$invalid }">
+        <label>Contraseña</label>
+        <input type="password" name="password" class="form-control"
+            ng-model="registerVm.user.password"
+            ng-minlength="6"
+            required>
+
+      <div class="help-block" ng-messages="registerVm.registerForm.password.$error" ng-if="registerVm.registerForm.password.$touched">
+        <p ng-message="required">Campo requerido</p>
+        <p ng-message="minlength">Contraseña muy corta</p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': registerVm.registerForm.passwordrepeat.$touched && registerVm.registerForm.passwordrepeat.$invalid }">
+        <label>Repita Contraseña</label>
+        <input type="password" name="passwordrepeat" class="form-control"
+            ng-model="registerVm.user.passwordrepeat"
+            ng-minlength="6"
+            match="registerVm.user.password"
+            required>
+
+      <div class="help-block" ng-messages="registerVm.registerForm.passwordrepeat.$error" ng-if="registerVm.registerForm.passwordrepeat.$touched">
+        <p ng-message="required">Campo requerido</p>
+        <p ng-message="minlength">Contraseña muy corta</p>
+        <p ng-message="match">Contraseñas no coinciden</p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': registerVm.registerForm.date.$touched && registerVm.registerForm.date.$invalid }">
+        <label>Fecha de nacimiento</label>
+        <input datetime-picker name="date" class="form-control"
+            ng-model="registerVm.user.date"
+            required>
+
+      <div class="help-block" ng-messages="registerVm.registerForm.date.$error" ng-if="registerVm.registerForm.date.$touched">
+        <p ng-message="required">Campo requerido</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" ng-disabled="registerVm.registerForm.$invalid">Submit</button>
+    </div>
+
+</form>
+</div>

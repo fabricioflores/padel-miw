@@ -6,7 +6,8 @@ angular
     'ngMessages',
     'angularjs-datetime-picker',
     'Alertify',
-    'ngStorage'
+    'ngStorage',
+    'validation.match'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider

@@ -28,6 +28,7 @@ module.exports = function(config) {
       'bower_components/angularjs-datetime-picker/angularjs-datetime-picker.js',
       'bower_components/ng-alertify/dist/ng-alertify.js',
       'bower_components/ngstorage/ngStorage.js',
+      'bower_components/angular-input-match/dist/angular-input-match.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
