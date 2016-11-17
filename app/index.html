@@ -22,39 +22,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" ui-sref="home">
-              <img src="images/upm.gif" class="logo-image">padel UPM</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li ui-sref-active="active"><a ui-sref="home">Inicio</a></li>
-              <li ui-sref-active="active"><a ui-sref="services">Servicios</a></li>
-              <li ui-sref-active="active"><a ui-sref="installations">Instalaciones</a></li>
-              <li ui-sref-active="active"><a ui-sref="reserve">Reservar</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-              <li ui-sref-active="active"><a ui-sref="register">Registrar</a></li>
-              <li ui-sref-active="active"><a ui-sref="login">Iniciar sesión</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div header>
     </div>
 
     <div class="container">
@@ -86,6 +54,7 @@
         <script src="scripts/controllers/login-controller.js"></script>
         <script src="scripts/controllers/register-controller.js"></script>
         <script src="scripts/controllers/reserve-controller.js"></script>
+        <script src="scripts/directives/header-directive.js"></script>
         <!-- endbuild -->
 </body>
 </html>

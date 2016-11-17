@@ -1,0 +1,34 @@
+<div class="header">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" ui-sref="home">
+          <img src="images/upm.gif" class="logo-image">padel UPM</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active"><a ui-sref="home">Inicio</a></li>
+          <li ui-sref-active="active"><a ui-sref="services">Servicios</a></li>
+          <li ui-sref-active="active"><a ui-sref="installations">Instalaciones</a></li>
+          <li ui-sref-active="active"><a ui-sref="reserve">Reservar</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li ui-sref-active="active"><a ui-sref="register">Registrar</a></li>
+          <li ng-if="!headerVm.hasSession" ui-sref-active="active"><a ui-sref="login">Iniciar sesión</a></li>
+          <li ng-if="headerVm.hasSession"><a href="javascript: void(0)" ng-click="headerVm.logout()">Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
