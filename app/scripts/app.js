@@ -5,7 +5,8 @@ angular
     'ui.router',
     'ngMessages',
     'angularjs-datetime-picker',
-    'Alertify'
+    'Alertify',
+    'ngStorage'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
