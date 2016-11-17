@@ -1,1 +1,33 @@
 <h1>Login</h1>
+
+<div class="container-pages">
+  <form name="loginVm.loginForm" novalidate ng-submit="loginVm.submit()">
+
+    <div class="form-group" ng-class="{ 'has-error': loginVm.loginForm.name.$touched && loginVm.loginForm.name.$invalid }">
+        <label>Email / Nombre de usuario</label>
+        <input type="text" name="name" class="form-control"
+            ng-model="loginVm.login.id"
+            required>
+
+            <div class="help-block" ng-messages="loginVm.loginForm.name.$error" ng-if="loginVm.loginForm.name.$touched">
+        <p ng-message="required">Campo requerido</p>
+    </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': loginVm.loginForm.password.$touched && loginVm.loginForm.password.$invalid }">
+        <label>Contraseña</label>
+        <input type="password" name="password" class="form-control"
+            ng-model="loginVm.login.password"
+            required>
+
+            <div class="help-block" ng-messages="loginVm.loginForm.password.$error" ng-if="loginVm.loginForm.password.$touched">
+        <p ng-message="required">Campo requerido</p>
+    </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" ng-disabled="loginVm.loginForm.$invalid">Login</button>
+    </div>
+
+</form>
+</div>
