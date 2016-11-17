@@ -4,7 +4,7 @@ angular
   .module('padelApp')
   .controller('LoginController', LoginController);
 
-function LoginController(LoginService) {
+function LoginController(LoginService, Alertify, $state) {
   var loginVm = this;
   loginVm.submit = submit;
   loginVm.login = {};
@@ -12,9 +12,12 @@ function LoginController(LoginService) {
   function submit(){
     if (!loginVm.loginForm.$invalid) {
       LoginService.login(loginVm.login).then(function(response){
-        //TODO manage success
+        //TODO save token locally
+        $state.go('home').then(function(){
+          Alertify.success('Has iniciado sesión');
+        });
       }, function(error){
-        //TODO manage error
+        Alertify.error(error.errorMessage);
       });
     }
   }

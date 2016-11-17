@@ -26,6 +26,7 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-messages/angular-messages.js',
       'bower_components/angularjs-datetime-picker/angularjs-datetime-picker.js',
+      'bower_components/ng-alertify/dist/ng-alertify.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

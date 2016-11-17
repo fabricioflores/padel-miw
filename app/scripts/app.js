@@ -4,7 +4,8 @@ angular
   .module('padelApp', [
     'ui.router',
     'ngMessages',
-    'angularjs-datetime-picker'
+    'angularjs-datetime-picker',
+    'Alertify'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
