@@ -20,7 +20,7 @@
           <li ui-sref-active="active"><a ui-sref="home">Inicio</a></li>
           <li ui-sref-active="active"><a ui-sref="services">Servicios</a></li>
           <li ui-sref-active="active"><a ui-sref="installations">Instalaciones</a></li>
-          <li ui-sref-active="active"><a ui-sref="reserve">Reservar</a></li>
+          <li ng-if="headerVm.hasSession" ui-sref-active="active"><a ui-sref="reserve">Reservar</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
