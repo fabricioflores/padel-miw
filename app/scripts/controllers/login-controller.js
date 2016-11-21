@@ -4,7 +4,7 @@ angular
   .module('padelApp.controllers')
   .controller('LoginController', LoginController);
 
-function LoginController(LoginService, Alertify, $state, $localStorage, $rootScope) {
+function LoginController(LoginService, Alertify, $state, $localStorage, $rootScope, vcRecaptchaService) {
   var loginVm = this;
   loginVm.submit = submit;
   loginVm.login = {};
@@ -18,6 +18,7 @@ function LoginController(LoginService, Alertify, $state, $localStorage, $rootSco
           Alertify.success('Has iniciado sesión');
         });
       }, function(error){
+        vcRecaptchaService.reload();
         Alertify.error(error.errorMessage);
       });
     }

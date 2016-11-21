@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="bower_components/angularjs-datetime-picker/angularjs-datetime-picker.css" />
     <link rel="stylesheet" href="bower_components/ng-alertify/dist/ng-alertify.css" />
+    <script src="//www.google.com/recaptcha/api.js?render=explicit&onload=vcRecaptchaApiLoaded" async defer></script>
     <!-- endbuild -->
   </head>
   <body ng-app="padelApp">
@@ -46,6 +47,7 @@
     <script src="bower_components/ng-alertify/dist/ng-alertify.js"></script>
     <script src="bower_components/ngstorage/ngStorage.js"></script>
     <script src="bower_components/angular-input-match/dist/angular-input-match.min.js"></script>
+    <script src="bower_components/angular-recaptcha/release/angular-recaptcha.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -53,6 +55,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/config/routes.js"></script>
         <script src="scripts/config/constants.js"></script>
+        <script src="scripts/config/captcha.js"></script>
         <script src="scripts/services/login-service.js"></script>
         <script src="scripts/controllers/login-controller.js"></script>
         <script src="scripts/controllers/register-controller.js"></script>

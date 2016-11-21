@@ -2,7 +2,6 @@
 
 angular
   .module('padelApp', [
-    'padelApp.config',
     'padelApp.services',
     'padelApp.controllers',
     'padelApp.directives',
@@ -11,10 +10,10 @@ angular
     'angularjs-datetime-picker',
     'Alertify',
     'ngStorage',
-    'validation.match'
+    'validation.match',
+    'vcRecaptcha'
   ]);
 
-angular.module('padelApp.config', []);
 angular.module('padelApp.services', []);
 angular.module('padelApp.controllers', []);
 angular.module('padelApp.directives', []);

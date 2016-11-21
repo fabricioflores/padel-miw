@@ -3,5 +3,6 @@
 angular
   .module('padelApp')
   .constant('APP', {
-    apiUrl: 'http://salonso.etsisi.upm.es/miw_serv/padel/conexion.php'
+    apiUrl: 'http://salonso.etsisi.upm.es/miw_serv/padel/conexion.php',
+    captchaToken: '6LeNiAwUAAAAAACwzJsdyxoXZxgZ03VSpsPrFzcT'
   });
