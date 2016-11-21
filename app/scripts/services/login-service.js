@@ -4,7 +4,7 @@ angular
   .module('padelApp')
   .factory('LoginService', LoginService);
 
-function LoginService($http, $q) {
+function LoginService($http, $q, APP) {
   var service = {
     login: login
   };
@@ -14,7 +14,7 @@ function LoginService($http, $q) {
   function login(user) {
     return $http({
       method: 'GET',
-      url: 'http://salonso.etsisi.upm.es/miw_serv/padel/conexion.php?id=' + user.id + '&password=' + user.password
+      url: APP.apiUrl + '?id=' + user.id + '&password=' + user.password
     }).then(function successCallback(response) {
         if (response.data.token) {
           return response.data;
