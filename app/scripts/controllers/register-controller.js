@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('padelApp')
+  .module('padelApp.controllers')
   .controller('RegisterController', RegisterController);
 
 function RegisterController() {

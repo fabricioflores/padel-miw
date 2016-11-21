@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('padelApp')
+  .module('padelApp.controllers')
   .controller('LoginController', LoginController);
 
 function LoginController(LoginService, Alertify, $state, $localStorage, $rootScope) {

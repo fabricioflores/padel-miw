@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('padelApp')
+  .module('padelApp.directives')
   .directive('header', header);
 
 function header() {

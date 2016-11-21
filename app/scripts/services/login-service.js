@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('padelApp')
+  .module('padelApp.services')
   .factory('LoginService', LoginService);
 
 function LoginService($http, $q, APP) {
