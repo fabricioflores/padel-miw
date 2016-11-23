@@ -20,7 +20,9 @@
   </form>
 
   <div class="row">
-    <div class="court col-sm-3 col-xs-12" ng-repeat="disponible in reserveVm.disponibilities">
+    <div class="court col-sm-3 col-xs-12"
+         ng-repeat="disponible in reserveVm.disponibilities track by $index"
+         ng-click="reserveVm.select($index)">
       <div class="court-container">
         <div class="courtId">
           Cancha {{disponible.courtId}}
