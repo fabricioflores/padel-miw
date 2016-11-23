@@ -32,7 +32,6 @@ function RegisterController(RegisterService, $state, Alertify) {
         email: registerVm.user.email,
         birthDate: new Date(registerVm.user.date).getTime()
       };
-      console.log(userToBackend);
       RegisterService.register(userToBackend).then(function(response){
         $state.go('login').then(function(){
           Alertify.success(response.errorMessage);

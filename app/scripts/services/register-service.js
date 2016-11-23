@@ -15,14 +15,10 @@ function RegisterService($http, APP, $q) {
 
   function register(user) {
     return $http({
-      method: 'POST',
+      method: 'GET',
       url: APP.apiUrl + 'usuario.php',
-      data: user,
-      headers : {
-           'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-       }
+      params: user
     }).then(function successCallback(response) {
-      console.log(response);
       if (response.data.errorMessage.match('no error')) {
         return response.data;
       }else{
