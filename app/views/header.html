@@ -24,7 +24,7 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li ui-sref-active="active"><a ui-sref="register">Registrar</a></li>
+          <li ng-if="!headerVm.hasSession" ui-sref-active="active"><a ui-sref="register">Registrar</a></li>
           <li ng-if="!headerVm.hasSession" ui-sref-active="active"><a ui-sref="login">Iniciar sesión</a></li>
           <li ng-if="headerVm.hasSession"><a href="javascript: void(0)" ng-click="headerVm.logout()">Cerrar sesión</a></li>
         </ul>
