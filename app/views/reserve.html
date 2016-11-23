@@ -3,43 +3,32 @@
 <div class="container-pages">
   <form name="reserveVm.reserveForm" novalidate ng-submit="reserveVm.submit()">
 
-    <div class="form-group" ng-class="{ 'has-error': reserveVm.reserveForm.name.$touched && reserveVm.reserveForm.name.$invalid }">
-        <label>Nombre</label>
-        <input type="text" name="name" class="form-control"
-            ng-model="reserveVm.reserve.name"
-            required>
-
-            <div class="help-block" ng-messages="reserveVm.reserveForm.name.$error" ng-if="reserveVm.reserveForm.name.$touched">
-        <p ng-message="required">Campo requerido</p>
-    </div>
-    </div>
-
-    <div class="form-group" ng-class="{ 'has-error': reserveVm.reserveForm.email.$touched && reserveVm.reserveForm.email.$invalid }">
-        <label>E-mail</label>
-        <input type="email" name="email" class="form-control"
-            ng-model="reserveVm.reserve.email"
-            required>
-
-            <div class="help-block" ng-messages="reserveVm.reserveForm.email.$error" ng-if="reserveVm.reserveForm.email.$touched">
-        <p ng-message="required">Campo requerido</p>
-        <p ng-message="email">E-mail no válido</p>
-    </div>
-    </div>
-
     <div class="form-group" ng-class="{ 'has-error': reserveVm.reserveForm.date.$touched && reserveVm.reserveForm.date.$invalid }">
-        <label>Fecha</label>
-        <input datetime-picker name="date" class="form-control"
-            ng-model="reserveVm.reserve.date"
-            required>
+      <label>Fecha</label>
+      <input datetime-picker name="date" date-only date-format="yyyy-MM-dd" class="form-control"
+          ng-model="reserveVm.reserve.date"
+          required>
 
-            <div class="help-block" ng-messages="reserveVm.reserveForm.date.$error" ng-if="reserveVm.reserveForm.date.$touched">
+      <div class="help-block" ng-messages="reserveVm.reserveForm.date.$error" ng-if="reserveVm.reserveForm.date.$touched">
         <p ng-message="required">Campo requerido</p>
-    </div>
+      </div>
     </div>
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary" ng-disabled="reserveVm.reserveForm.$invalid">Submit</button>
     </div>
+  </form>
 
-</form>
+  <div class="row">
+    <div class="court col-sm-3 col-xs-12" ng-repeat="disponible in reserveVm.disponibilities">
+      <div class="court-container">
+        <div class="courtId">
+          Cancha {{disponible.courtId}}
+        </div>
+        <div class="courtDate">
+          {{disponible.date | date:'medium' }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

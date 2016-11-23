@@ -1,0 +1,31 @@
+.court{
+
+  &:hover {
+    opacity:0.5;
+  }
+
+  .court-container {
+    height: 100px;
+    background: url('../images/fondo-pasto.jpg');
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    padding-top: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      opacity:0.5;
+    }
+
+
+    .courtId {
+      font-size: 24px;
+    }
+
+    .courtDate {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+  }
+}

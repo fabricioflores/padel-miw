@@ -4,14 +4,16 @@ angular
   .module('padelApp.controllers')
   .controller('ReserveController', ReserveController);
 
-function ReserveController() {
+function ReserveController(ReserveService) {
   var reserveVm = this;
   reserveVm.submit = submit;
-  reserveVm.reserve = {};
 
   function submit(){
     if (!reserveVm.reserveForm.$invalid) {
-      //TODO send data
+      var date = new Date(reserveVm.reserve.date).getTime();
+      ReserveService.getDisponibility(date).then(function(response){
+        reserveVm.disponibilities = response;
+      });
     }
   }
 }
