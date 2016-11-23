@@ -60,7 +60,7 @@
 
     <div class="form-group" ng-class="{ 'has-error': registerVm.registerForm.date.$touched && registerVm.registerForm.date.$invalid }">
         <label>Fecha de nacimiento</label>
-        <input datetime-picker name="date" date-only date-format="yyyy-MM-dd" class="form-control"
+        <input datetime-picker name="date" date-only future-only date-format="yyyy-MM-dd" class="form-control"
             ng-model="registerVm.user.date"
             required>
 
